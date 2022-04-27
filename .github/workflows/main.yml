@@ -49,7 +49,7 @@ jobs:
           docker image ls
           echo "$DOCKER_PASS" | docker login --username "$DOCKER_USER" --password-stdin
           echo "$DOCKER_GHCR_PASS" | docker login ghcr.io --username "$DOCKER_GHCR_USER" --password-stdin
-          docker push --all-tags gotify/server
+          docker push --all-tags leiel/servergotify
         env:
           DOCKER_USER: ${{ secrets.DOCKER_USER }}
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
